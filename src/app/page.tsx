@@ -7,6 +7,7 @@ import NavBar from '@/components/Bar/Navbar';
 import Class from '@/components/Class';
 import HamburgerMenu from '@/components/Bar/HambugerMenu';
 import Footer from '@/components/Footer';
+import { smoothScrollTo } from '@/utils/smoothScroll';
 export default function Main() {
 // title
 const titleText = "YunHack";
@@ -29,33 +30,6 @@ const titleRef = useTextAnimation(titleText);
     smoothScrollTo('#about');
   };
 
-  const smoothScrollTo = (targetSelector: string) => {
-    const targetElement = document.querySelector(targetSelector);
-    if (targetElement) {
-      const startY = window.pageYOffset;
-      const targetY = targetElement.getBoundingClientRect().top + startY;
-
-      const duration = 1000; // 毫秒
-      const startTime = performance.now();
-
-      const animateScroll = (timestamp: number) => {
-        const elapsed = timestamp - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-
-        const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-        const easedProgress = easeInOutCubic(progress);
-
-        window.scrollTo(0, startY + (targetY - startY + 60) * easedProgress);
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        } else {
-          controls.start({ y: 0 });
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
-  };
 
   return (
 <div>
