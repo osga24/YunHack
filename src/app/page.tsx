@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import useTextAnimation from '@/utils/TextAnimation';
 import About from '@/components/About';
 import NavBar from '@/components/Bar/Navbar';
-import Class from '@/components/Class';
+import Course from '@/components/Course';
 import HamburgerMenu from '@/components/Bar/HambugerMenu';
 import Footer from '@/components/Footer';
 import { smoothScrollTo } from '@/utils/smoothScroll';
@@ -69,7 +69,7 @@ const titleRef = useTextAnimation(titleText);
 </div>
 
 	<About/>
-	<Class/>
+	<Course/>
 	<Footer/>
 
 </div>

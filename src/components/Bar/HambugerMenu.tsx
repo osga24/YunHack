@@ -29,6 +29,7 @@ const HamburgerMenu = () => {
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
           <nav className="flex flex-col p-4">
             <a href="#" className="block text-gray-800 hover:text-blue-500">About</a>
+            <a href="#course" className="block text-gray-800 hover:text-blue-500">Course</a>
             <a href="#about" className="block text-gray-800 hover:text-blue-500">Members</a>
             <a href="#" className="block text-gray-800 hover:text-blue-500">Contact</a>
             <button className="bg-[#5567E3] hover:bg-[#6F86D4] text-white font-bold py-2 px-4 rounded mt-2">
