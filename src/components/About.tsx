@@ -10,7 +10,7 @@ export default function About() {
             <img className='rounded-xl w-[80%] h-auto' src='/images/LOGO.png' alt="/" />
           </div>
           {/* 文字部分 */}
-          <div className="flex flex-col justify-center items-center text-center">
+          <div className="flex flex-col justify-center items-center text-center px-5 md:py-0">
             <h1 className='md:text-5xl sm:text-3xl text-2xl font-bold py-2'>關於我們！</h1>
             <div className='text-xl font-bold'>
               <p>雲科資安社是由 <span className='text-green-400'>黃宥睿、郭泓毅、蘇育愷</span></p>
