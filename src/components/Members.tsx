@@ -1,14 +1,42 @@
 import React from 'react';
 
+const members = [
+  {
+    id: 1,
+    name: "OsGa",
+    role: "社長",
+    image: "images/members/osga.png",
+    description: "為什麼要辦雲科資安社，因為我考不上台科大。"
+  },
+  {
+    id: 2,
+    name: "泰瑞",
+    role: "副社長",
+    image: "https://stickershop.line-scdn.net/stickershop/v1/product/868/LINEStorePC/main.png?v=8",
+    description: "都逼嘟逼嘟哇 都逼嘟逼嘟哇 特務P"
+  },
+  {
+    id: 3,
+    name: "鍾佳播",
+    role: "副社長",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBxdrZbBnno8pgjgXtZNGaIaHawApQtj0CQA&s",
+    description: "惡魔貓男..海龍王彼得..卑鄙原之柱..你今晚的噩夢"
+  },
+  // 可以繼續添加更多成員...
+];
+
 const MemberCard = ({ member }) => (
   <div className="bg-white rounded-lg shadow-lg p-6 transition-transform duration-200 transform hover:scale-105">
-    <img
-      src={`/api/placeholder/200/200`}
-      alt={`成員${member}`}
-      className="w-full h-48 object-cover rounded-md mb-4"
-    />
-    <h3 className="text-xl font-semibold">成員名稱{member}</h3>
-    <p className="text-gray-600">"這是成員{member}的話，分享他們的想法和經歷。"</p>
+    <div className="aspect-square w-full mb-4 overflow-hidden rounded-md">
+      <img
+        src={member.image}
+        alt={`${member.name}的照片`}
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <h3 className="text-xl font-semibold">{member.name}</h3>
+    <p className="text-gray-600 mb-2">{member.role}</p>
+    <p className="text-gray-600">{member.description}</p>
   </div>
 );
 
@@ -17,9 +45,9 @@ export default function Members() {
     <section id="members" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">成員介紹</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3, 4, 5, 6].map((member) => (
-            <MemberCard key={member} member={member} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {members.map((member) => (
+            <MemberCard key={member.id} member={member} />
           ))}
         </div>
       </div>

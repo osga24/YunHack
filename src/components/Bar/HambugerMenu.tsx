@@ -30,7 +30,7 @@ const HamburgerMenu = () => {
           <nav className="flex flex-col p-4">
             <a href="#about" className="block text-gray-800 hover:text-blue-500">About</a>
             <a href="#course" className="block text-gray-800 hover:text-blue-500">Course</a>
-            <a href="#" className="block text-gray-800 hover:text-blue-500">Members</a>
+            <a href="#members" className="block text-gray-800 hover:text-blue-500">Members</a>
             <a href="#contact" className="block text-gray-800 hover:text-blue-500">Contact</a>
             <button className="bg-[#5567E3] hover:bg-[#6F86D4] text-white font-bold py-2 px-4 rounded mt-2">
               <a href="https://discord.gg/vxgqgpSmBj">Join Discord</a>
