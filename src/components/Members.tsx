@@ -1,6 +1,15 @@
 import React from 'react';
 
-const MemberCard = ({ member }) => (
+// 定義 Member 的類型
+type Member = {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+};
+
+const MemberCard = ({ member }: { member: Member }) => (
   <div className="bg-white rounded-lg shadow-lg p-6 transition-transform duration-200 transform hover:scale-105">
     <div className="aspect-square w-full mb-4 overflow-hidden rounded-md">
       <img
