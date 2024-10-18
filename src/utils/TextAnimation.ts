@@ -14,7 +14,7 @@ const useTextAnimation = (titleText: string) => {
     return text;
   };
 
- const animateTitle = () => {
+  const animateTitle = () => {
     if (!titleRef.current) return;
 
     const animationInterval = 3000; // 調整為每次重置動畫的時間（毫秒），例如改為 3000
@@ -28,7 +28,10 @@ const useTextAnimation = (titleText: string) => {
           for (let k = 0; k <= 5; k++) {
             window.setTimeout(() => {
               const correct = titleText.slice(0, current) + randomText(titleText.length - current);
-              titleRef.current.innerText = correct;
+              // 在這裡檢查 titleRef.current 是否為 null
+              if (titleRef.current) {
+                titleRef.current.innerText = correct;
+              }
             }, randomDelay * k);
           }
         }, characterDelay * j);
