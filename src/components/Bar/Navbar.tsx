@@ -13,12 +13,17 @@ const about_handleClick = (event: React.MouseEvent) => {
 
 const course_handleClick = (event: React.MouseEvent) => {
 	event.preventDefault();
-	smoothScrollTo('#contact', 1500); // 可以更改滾動到的目標和時間
+	smoothScrollTo('#course', 1500); // 可以更改滾動到的目標和時間
   };
 
 const contact_handleClick = (event: React.MouseEvent) => {
 	event.preventDefault();
 	smoothScrollTo('#contact', 1500); // 可以更改滾動到的目標和時間
+  };
+
+const members_handleClick = (event: React.MouseEvent) => {
+	event.preventDefault();
+	smoothScrollTo('#members', 1500); // 可以更改滾動到的目標和時間
   };
 return (
     <motion.div
@@ -31,7 +36,7 @@ return (
       <nav className="flex items-center space-x-6 text-lg font-bold">
         <a onClick={about_handleClick} href="#about" className="text-gray-800 hover:text-[#94b9ff]">About</a>
         <a onClick={course_handleClick} href="#course" className="text-gray-800 hover:text-[#94b9ff]">Course </a>
-        <a href="#members" className="text-gray-800 hover:text-[#94b9ff]">Members</a>
+        <a onClick={members_handleClick} href="#members" className="text-gray-800 hover:text-[#94b9ff]">Members</a>
         <a onClick={contact_handleClick} href="#contact" className="text-gray-800 hover:text-blue-500">Contact</a>
         <button className="bg-[#5567E3] hover:bg-[#6F86D4] text-white font-bold py-2 px-4 rounded hidden md:block">
           <a href="https://discord.gg/vxgqgpSmBj">Join Discord</a>
