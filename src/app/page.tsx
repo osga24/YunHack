@@ -7,6 +7,8 @@ import NavBar from '@/components/Bar/Navbar';
 import Course from '@/components/Course';
 import HamburgerMenu from '@/components/Bar/HambugerMenu';
 import Footer from '@/components/Footer';
+import Members from '@/components/Members';
+import Contact from '@/components/Contact';
 import { smoothScrollTo } from '@/utils/smoothScroll';
 export default function Main() {
 // title
@@ -70,6 +72,8 @@ const titleRef = useTextAnimation(titleText);
 
 	<About/>
 	<Course/>
+	<Members/>
+	<Contact/>
 	<Footer/>
 
 </div>

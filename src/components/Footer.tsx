@@ -47,7 +47,8 @@ export default function Footer() {
           transition={{ duration: 0.5 }}
           className="fixed bottom-0 left-0 right-0 px-6 sm:px-16 py-8 shadow-lg"
         >
-        <div className="flex flex-col sm:flex-row justify-between items-center">
+		{/* <hr className='py-2'/> */}
+		<div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="hidden sm:block sm:w-1/3"></div>
             <p className="text-sm text-gray-600 w-full sm:w-1/3 text-center mb-4 sm:mb-0">&copy; 2024 OsGa</p>
         <div className="w-1/3 flex justify-end sm:justify-end">
