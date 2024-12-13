@@ -47,7 +47,7 @@ export default function Contact() {
           {/* Email Address */}
           <div className='text-xl font-semibold md:text-lg'>
             <p>Contact us via Email:</p>
-            <a href='mailto:nyust.hacking@gmail.com' className='text-blue-500'>nyust.hacking@gmail.com</a>
+            <a href='mailto:yunhack@啥.tw' className='text-blue-500'>nyust.hacking@gmail.com</a>
           </div>
         </div>
 
